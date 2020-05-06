@@ -18,9 +18,17 @@ from django.urls import path
 from django.contrib import admin
 from django.urls import path
 from test_app.views import hello
+from test_app.views import gen_password
+from test_app.views import get_customers
+from test_app.views import get_unique_name
+from test_app.views import get_value
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('hello/', hello),
-    path('', admin.site.urls)
+    path('', admin.site.urls),
+    path('password/', gen_password),
+    path('customers/', get_customers),
+    path('unique/', get_unique_name),
+    path('value/', get_value)
 ]
